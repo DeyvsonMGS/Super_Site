@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exemplo.css">
+    <title>Heroiverso</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="SupeSite.html"><img src="Assets/logo-removebg-preview.png" alt="Logo"></a>
+        <ul>
+            <li><a href="SupeSite.html">Heroiverso</a></li>
+            <li><a href="https://dc.fandom.com/pt-br/wiki/Categoria:Personagens">DC</a></li>
+            <li><a href="https://herois.fandom.com/pt-br/wiki/Categoria:Anti-her%C3%B3is">Anti-Herói</a></li>
+            <li><a href="https://marvel.fandom.com/pt-br/wiki/Marvel_Wiki:Lista_de_Personagens">Marvel</a></li>
+        </ul>
+    </div>
+    <div style="background-color: rgba(0, 0, 0, 0.557);">
+        <div style="display: flex; justify-content: center;  ">
+            <div style="display: flex; text-align: center;">
+                <h1 style="margin-right: 10px; color: rgb(255, 1, 1);">Reconhecimento</h1>
+                <h1 style="margin-right: 10px;color: rgb(128, 128, 128);">DO</h1>
+                <h1 style="margin-right: 10px; color: rgb(0, 29, 250);">Heroiverso</h1>
+            </div>
+        </div>
+        <div class="button-container">
+            <input type="file" id="image-upload" class="custom-input">
+            <label for="image-upload" class="custom-input-label">Coloque sua foto aqui</label>
+            <img id="image-preview" src="">
+            <img src="" id="img-classe">
+        </div>
+
+    </div>
+    <br>
+    <div style="background-color: rgba(0, 0, 0, 0.557);">
+        <div class="resultado">
+            <p style="color:#000000;-webkit-text-stroke: 1px #eb0000">Universo da Marvel</p>
+            <div class="result-bar">
+                <span id="prob1">0%</span>
+                <div id="bar-vingadores" class="bar-fill-Marvel"></div>
+            </div>
+            <br>
+            <p style="color:rgb(53, 64, 193);-webkit-text-stroke: 0.5px rgb(0, 29, 250);">Universo da Dc</p>
+            <div class="result-bar">
+                <span id="prob2">0%</span>
+                <div id="bar-liga-da-justica" class="bar-fill-Dc"></div>
+            </div>
+            <br>
+            <p style="color:rgb(0, 0, 0);-webkit-text-stroke: 0.5px #c2c2c2;">Anti-Herói</p>
+            <div class="result-bar">
+                <span id="prob3">0%</span>
+                <div id="bar-anti-heroi" class="bar-fill-Anti-Herói"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
