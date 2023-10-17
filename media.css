@@ -14,13 +14,13 @@
     }
 
     .resultado {
-        position: absolute;
-        top: 50%;
+        position: fixed;
+        top: 60%;
         left: 50%;
-        transform: translate(-50%, -50%);;
+        transform: translate(-50%, -50%);
     }
 
-    .resultado img {
+   .resultado img {
         width: 120px;
         height: auto; 
     }

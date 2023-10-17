@@ -81,13 +81,40 @@ async function classificarImagem(img) {
     }
     if(maxClass === "Vingadores"){
         const imgClasse = document.getElementById('img-classe');
-        // imgClasse.src = "anti-heroi-Logo.png";
+        imgClasse.src = "Assets/logo_Marvel.jpg";
+        imgClasse.style.width = '100px'
+        imgClasse.style.padding = '20px'
+        imgClasse.style.borderRadius = '10px'
+        imgClasse.style.backgroundColor = '#fff'
+        imgClasse.style.marginBottom = '10px';
+        imgClasse.style.marginTop = '10px';
+        
+        const buttonContainer = document.getElementById('button-container');
+        buttonContainer.style.display = 'none'
     }else if(maxClass === "Liga da Justiça"){
         const imgClasse = document.getElementById('img-classe');
-        // imgClasse.src = "anti-heroi-Logo.png";
+        imgClasse.src = "Assets/logo_DC.png";
+        imgClasse.style.width = '100px'
+        imgClasse.style.padding = '20px'
+        imgClasse.style.borderRadius = '10px'
+        imgClasse.style.backgroundColor = '#fff'
+        imgClasse.style.marginBottom = '10px';
+        imgClasse.style.marginTop = '10px';
+        
+        const buttonContainer = document.getElementById('button-container');
+        buttonContainer.style.display = 'none'
     }else if(maxClass === "Anti-Herói"){
         const imgClasse = document.getElementById('img-classe');
-        // imgClasse.src = "anti-heroi-Logo.png";
+        imgClasse.src = "Assets/logo_Anti.png";
+        imgClasse.style.width = '100px'
+        imgClasse.style.padding = '20px'
+        imgClasse.style.borderRadius = '10px'
+        imgClasse.style.backgroundColor = '#fff'
+        imgClasse.style.marginBottom = '10px';
+        imgClasse.style.marginTop = '10px';
+        
+        const buttonContainer = document.getElementById('button-container');
+        buttonContainer.style.display = 'none'
     }
 
 
