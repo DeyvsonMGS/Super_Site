@@ -12,33 +12,32 @@ async function init(){
 
     maxPredictions = modelo.getTotalClasses();
 
-    labelContainer = document.getElementById('result-container')
+    labelContainer = document.getElementById('label-container')
 
     document.getElementById('image-upload').addEventListener('change', carregarImagem); 
 }
 
 function carregarImagem() {
     let image = document.getElementById("image-upload").files[0];
-    let imagePreview = document.getElementById('image-preview');
+    let imagePreview = document.createElement('img');
     imagePreview.src = URL.createObjectURL(image);
 
     imagePreview.onload = async () => {
         imagePreview.width = 300;
         imagePreview.height = 300;
+        const inputContainer = document.getElementById('input-container');
 
-        document.getElementById("input-container").innerHTML = '';
+        inputContainer.innerHTML = '';
         document.getElementById("input-container").appendChild(imagePreview)
-
         classificarImagem(imagePreview);
     }
 }
 
 
-async function classificarImagem(image) {
+async function classificarImagem(img) {
     labelContainer.innerHTML = '';
-    const prediction = await modelo.predict(image);
+    const prediction = await modelo.predict(img);
     let maxProbability = -1;
-    let maxClass = null;
     for(let i = 0; i < maxPredictions; i++){
 
         if(prediction[i].className === "Vingadores"){
@@ -78,21 +77,42 @@ async function classificarImagem(image) {
             maxProbability = prediction[i].probability;
             maxClass = prediction[i].className;
         }
-        switch(prediction[i] && prediction[i].className && prediction[i].probability){
-            case "Vingadores":
-                const imgClasse = document.getElementById('img-classe');
-                imgClasse.src = "anti-heroi-Logo.png"
-                break
-            case "Liga da Justiça":
-                const imgClasse2 = document.getElementById('img-classe');
-                imgClasse2.src = "anti-heroi-Logo.png";
-                break
-            case "Anti-Herói":
-                const imgClasse3 = document.getElementById('img-classe');
-                imgClasse3.src = "anti-heroi-Logo.png";
-                break
-        }
+
     }
+    if(maxClass === "Vingadores"){
+        const imgClasse = document.getElementById('img-classe');
+        // imgClasse.src = "anti-heroi-Logo.png";
+    }else if(maxClass === "Liga da Justiça"){
+        const imgClasse = document.getElementById('img-classe');
+        // imgClasse.src = "anti-heroi-Logo.png";
+    }else if(maxClass === "Anti-Herói"){
+        const imgClasse = document.getElementById('img-classe');
+        // imgClasse.src = "anti-heroi-Logo.png";
+    }
+
+
+    const resultado = document.createElement("div");
+    resultado.innerHTML = `<strong>Resultado Final: ${maxClass} (${(maxProbability * 100).toFixed(2)}%)</strong>`;
+    labelContainer.appendChild(resultado);
+    resultado.style.display = "flex"
+    resultado.style.flexDirection = "column"
+    resultado.style.alignItems = "center"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

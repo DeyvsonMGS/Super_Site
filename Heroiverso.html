@@ -3,61 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="exemplo.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="hero_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Black+Ops+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
     <title>Heroiverso</title>
 </head>
 <body>
     <div class="navbar">
-        <a href="SupeSite.html"><img src="Assets/logo-removebg-preview.png" alt="Logo"></a>
+        <a href="Heroiverso.html"><img src="Assets/logo-removebg-preview.png" alt="Logo"></a>
         <ul>
-            <li><a href="Heroiverso.html">Heroiverso</a></li>
-            <li><a href="https://dc.fandom.com/pt-br/wiki/Categoria:Personagens">DC</a></li>
-            <li><a href="https://herois.fandom.com/pt-br/wiki/Categoria:Anti-her%C3%B3is">Anti-Herói</a></li>
-            <li><a href="https://marvel.fandom.com/pt-br/wiki/Marvel_Wiki:Lista_de_Personagens">Marvel</a></li>
+            <li><a href="Heroiverso.html" style="color: #878787;">Heroiverso</a></li>
+            <li><a href="https://herois.fandom.com/pt-br/wiki/Categoria:Anti-her%C3%B3is" style="color: #878787;">Anti-Herói</a></li>
+            <li><a href="https://dc.fandom.com/pt-br/wiki/Categoria:Personagens" style="color: rgb(0, 38, 255);">DC</a></li>
+            <li><a href="https://marvel.fandom.com/pt-br/wiki/Marvel_Wiki:Lista_de_Personagens" style="color: #eb0000;">Marvel</a></li>
+
         </ul>
     </div>
-    <div style="background-color: rgba(0, 0, 0, 0.557);">
-        <div style="display: flex; justify-content: center;  ">
-            <div style="display: flex; text-align: center;">
-                <h1 style="margin-right: 10px; color: rgb(255, 1, 1);">Reconhecimento</h1>
-                <h1 style="margin-right: 10px;color: rgb(128, 128, 128);">DO</h1>
-                <h1 style="margin-right: 10px; color: rgb(0, 29, 250);">Heroiverso</h1>
+
+        <div >
+            <div style="display: flex; justify-content: center;margin: 0;">
+                <div class="ajust"f>
+                    <h1 style="margin-right: 10px; color:#808080;-webkit-text-stroke: 0.5mpx #ffffff; font-family: Bangers;">Reconhecimento</h1>
+                    <h1 style="margin-right: 10px; color: #575757;-webkit-text-stroke: 0.5px #858585;font-family: Bangers">Do</h1>
+                    <h1 style="margin-right: 10px; color:#000000;-webkit-text-stroke: 0.5px #3b3b3b;font-family: Bangers">Heroiverso</h1>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <div id="button-container">
+                    <input type="file" id="image-upload" class="custom-input" accept="image/png, image/jpeg">
+                    <label for="image-upload" class="custom-input-label">Verificar</label>
+                </div>
             </div>
         </div>
-        <div class="button-container">
-            <input type="file" id="image-upload" class="custom-input">
-            <label for="image-upload" class="custom-input-label">Coloque sua foto aqui</label>
-            <img id="image-preview" src="">
-            <img src="" id="img-classe">
+        <br>
+        <div>
+            <div class="resultado">
+                <div id="input-container"></div>
+                <div id="label-container"></div>
+                <img src="" id="img-classe">
+        
+                <p style="color:#ff0000;-webkit-text-stroke: 1px #000000 ; font-family: Black Ops One;">Universo da Marvel</p>
+                <div class="result-bar">
+                    <div id="bar-vingadores" class="bar-fill-Marvel"><span id="prob1">0%</span></div>
+                </div>
+                <br>
+                <p style="color:rgb(0, 21, 255);-webkit-text-stroke: 0.5px rgb(255, 255, 255);font-family: Black Ops One;">Universo da Dc</p>
+                <div class="result-bar">
+                    <div id="bar-liga-da-justica" class="bar-fill-Dc"><span id="prob2">0%</span></div>
+                </div>
+                <br>
+                <p style="color:rgb(0, 0, 0);-webkit-text-stroke: 0.5px #848484;font-family: Black Ops One;">Anti-Herói</p>
+                <div class="result-bar">
+                    <div id="bar-anti-heroi" class="bar-fill-Anti-Herói"><span id="prob3">0%</span></div>
+                </div>
+            </div>
         </div>
 
-    </div>
-    <br>
-    <div style="background-color: rgba(0, 0, 0, 0.557);">
-        <div class="resultado">
-            <p style="color:#000000;-webkit-text-stroke: 1px #eb0000">Universo da Marvel</p>
-            <div class="result-bar">
-                <span id="prob1">0%</span>
-                <div id="bar-vingadores" class="bar-fill-Marvel"></div>
-            </div>
-            <br>
-            <p style="color:rgb(53, 64, 193);-webkit-text-stroke: 0.5px rgb(0, 29, 250);">Universo da Dc</p>
-            <div class="result-bar">
-                <span id="prob2">0%</span>
-                <div id="bar-liga-da-justica" class="bar-fill-Dc"></div>
-            </div>
-            <br>
-            <p style="color:rgb(0, 0, 0);-webkit-text-stroke: 0.5px #c2c2c2;">Anti-Herói</p>
-            <div class="result-bar">
-                <span id="prob3">0%</span>
-                <div id="bar-anti-heroi" class="bar-fill-Anti-Herói"></div>
-            </div>
-        </div>
-    </div>
-
-    <script src="index.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script>
+    <script src="Hero_index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     
 </body>
 </html>

@@ -1,0 +1,67 @@
+/* Celulares e telas menores */
+@media only screen and (max-width: 767px) {
+    .navbar {
+        flex-direction: column; /* Altere a direção dos itens para coluna em telas menores */
+        align-items: center; /* Centralize os itens na tela */
+    }
+
+    .navbar img {
+        margin: 20px 0; /* Ajuste as margens da imagem */
+    }
+
+    .navbar ul {
+        margin: 20px 0; /* Ajuste as margens da lista */
+    }
+
+    .resultado {
+        position: absolute;
+        top: 72%;
+        left: 50%;
+        transform: translate(-50%, -50%);;
+    }
+
+    .resultado img {
+        width: 120px; /* Ajuste o tamanho da imagem para telas menores */
+        height: auto; /* Mantenha a proporção da imagem */
+    }
+  .result-bar{
+        max-width: 100%;
+    }
+    #label-container{
+        font-size: .5rem;
+    }
+    h1{
+        font-size: 30px;
+    }
+    .button-container {
+        font-size: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 1080px) {
+    .navbar {
+        flex-direction: column; /* Altere a direção dos itens para coluna em telas menores */
+        align-items: center; /* Centralize os itens na tela */
+    }
+
+    .navbar img {
+        margin: 20px 0; /* Ajuste as margens da imagem */
+    }
+
+    .navbar ul {
+        margin: 20px 0; /* Ajuste as margens da lista */
+    }
+
+    .resultado {
+        position: absolute;
+        top: 89%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .resultado img {
+        width: 100px; /* Ajuste o tamanho da imagem para telas maiores */
+        height: auto; /* Mantenha a proporção da imagem */
+    }
+}
